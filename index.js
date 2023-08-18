@@ -14,11 +14,11 @@ function initializeGame() {
   vBoard = [['', '', ''], ['', '', ''], ['', '', '']]
   turnPlayer = 'player1'
 
-  // Ajusta o título da página (caso seja necessário)
+  // Ajusta o título da página
   document.querySelector('h2').innerHTML = 'Vez de: <span id="turnPlayer"></span>'
   updateTitle()
 
-  // Limpa o tabuleiro (caso seja necessário) e adiciona os eventos de clique
+  // Limpa o tabuleiro e adiciona os eventos de clique
   boardRegions.forEach(function (element) {
     element.classList.remove('win')
     element.innerText = ''
@@ -82,7 +82,7 @@ function handleBoardClick(ev) {
     vBoard[row][column] = 'O'
   }
   
-  // Limpa o console e exibe nosso tabuleiro virtual
+  // Limpa o console e exibe tabuleiro virtual
   console.clear()
   console.table(vBoard)
   
